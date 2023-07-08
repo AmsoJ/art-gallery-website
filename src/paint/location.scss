@@ -1,0 +1,135 @@
+@import './color';
+@font-face {
+    font-family: oBold;
+    src: url(./Outfit-Bold.ttf);
+}
+@font-face {
+    font-family: oMed;
+    src: url(./Outfit-Medium.ttf);
+}
+@font-face {
+    font-family: oReg;
+    src: url(./Outfit-Regular.ttf);
+}
+
+body {
+    min-height: 100vh;
+}
+
+.wrapper {
+    min-height: 100vh;
+    // background-color: $black-color;
+    .location-map {
+        height: 80vh;
+        // background-color: yellow;
+        .map {
+            min-height: 100%;
+            background-image: url(./../assets/desktop/image-map.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .home {
+            top: 30px;
+            left: 30px;
+            // background-color: yellow;
+            width: 200px;
+            height: 50px;
+            text-decoration: none;
+            font-family: oBold;
+            span{
+                height: 100%;
+                &:first-child {
+                    width: 20%;
+                    background-color: $brown-color;
+                }
+                &:last-child {
+                    width: 80%;
+                    background-color: $black-color;
+                }
+            }
+        }
+    }
+    .location-area {
+        background-color: $black-color;
+        .locale-row {
+            min-height: 300px;
+            .left {
+                width: 50%;
+                .title {
+                    font-family: oBold;
+                    font-size: 5vw;
+                }
+            }
+            .right {
+                width: 50%;
+                .address {
+                    font-family: oBold;
+                    color: $brown-color;
+                    font-size: 40px;
+                }
+                .address-main {
+                    p {
+                        margin: 0;
+                        font-size: 23px;
+                        font-family: oReg;
+                    }
+                }
+                .time {
+                    font-size: 23px;
+                    font-family: oReg;
+                }
+            }
+        }
+    }
+    .endpage {
+        background-color: $brown-color;
+        .endpage-wrap {
+            // background-color: yellow;
+            div {
+                .title-wrap {
+                }
+                .sum-up {
+                    .end-text {
+                        font-family: oReg;
+                        font-size: 22px;
+                        color: $black-color;
+                    }
+                }
+                .social {
+                    gap: 20px;
+                    svg {
+                        path {
+                            fill: $black-color
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .location-map {
+        .map {
+            background-image: url(./../assets/mobile/image-map.png);
+        }
+    }
+    .wrapper {
+        .location-area {
+            background-color: $black-color;
+            .locale-row {
+                min-height: 300px;
+                .left {
+                    width: 100%;
+                    .title {
+                        font-size: 10vw;
+                    }
+                }
+                .right {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

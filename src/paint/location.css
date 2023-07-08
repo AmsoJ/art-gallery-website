@@ -1,0 +1,113 @@
+@font-face {
+  font-family: oBold;
+  src: url(./Outfit-Bold.ttf);
+}
+@font-face {
+  font-family: oMed;
+  src: url(./Outfit-Medium.ttf);
+}
+@font-face {
+  font-family: oReg;
+  src: url(./Outfit-Regular.ttf);
+}
+body {
+  min-height: 100vh;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+.wrapper .location-map {
+  height: 80vh;
+}
+.wrapper .location-map .map {
+  min-height: 100%;
+  background-image: url(./../assets/desktop/image-map.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.wrapper .location-map .home {
+  top: 30px;
+  left: 30px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  font-family: oBold;
+}
+.wrapper .location-map .home span {
+  height: 100%;
+}
+.wrapper .location-map .home span:first-child {
+  width: 20%;
+  background-color: #d5966c;
+}
+.wrapper .location-map .home span:last-child {
+  width: 80%;
+  background-color: #151515;
+}
+.wrapper .location-area {
+  background-color: #151515;
+}
+.wrapper .location-area .locale-row {
+  min-height: 300px;
+}
+.wrapper .location-area .locale-row .left {
+  width: 50%;
+}
+.wrapper .location-area .locale-row .left .title {
+  font-family: oBold;
+  font-size: 5vw;
+}
+.wrapper .location-area .locale-row .right {
+  width: 50%;
+}
+.wrapper .location-area .locale-row .right .address {
+  font-family: oBold;
+  color: #d5966c;
+  font-size: 40px;
+}
+.wrapper .location-area .locale-row .right .address-main p {
+  margin: 0;
+  font-size: 23px;
+  font-family: oReg;
+}
+.wrapper .location-area .locale-row .right .time {
+  font-size: 23px;
+  font-family: oReg;
+}
+.wrapper .endpage {
+  background-color: #d5966c;
+}
+.wrapper .endpage .endpage-wrap div .sum-up .end-text {
+  font-family: oReg;
+  font-size: 22px;
+  color: #151515;
+}
+.wrapper .endpage .endpage-wrap div .social {
+  gap: 20px;
+}
+.wrapper .endpage .endpage-wrap div .social svg path {
+  fill: #151515;
+}
+
+@media screen and (max-width: 500px) {
+  .location-map .map {
+    background-image: url(./../assets/mobile/image-map.png);
+  }
+  .wrapper .location-area {
+    background-color: #151515;
+  }
+  .wrapper .location-area .locale-row {
+    min-height: 300px;
+  }
+  .wrapper .location-area .locale-row .left {
+    width: 100%;
+  }
+  .wrapper .location-area .locale-row .left .title {
+    font-size: 10vw;
+  }
+  .wrapper .location-area .locale-row .right {
+    width: 100%;
+  }
+}
